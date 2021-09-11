@@ -1,0 +1,48 @@
+name:                vh-count
+version:             0.1.0.0
+github:              "unhammer/vh-count"
+license:             BSD3
+author:              "Kevin Brubeck Unhammer"
+maintainer:          "unhammer@fsfe.org"
+copyright:           "Copyright: (c) 2021 Kevin Brubeck Unhammer"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Natural Language Processing
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/unhammer/vh-count#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  vh-count-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - vh-count
+
+tests:
+  vh-count-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - vh-count
