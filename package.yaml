@@ -21,6 +21,11 @@ description:         Please see the README on GitHub at <https://github.com/unha
 
 dependencies:
 - base >= 4.7 && < 5
+- vector-hashtables >= 0.1.1.1 && < 0.2
+- streamly
+- unordered-containers
+- vector
+- text
 
 library:
   source-dirs: src
